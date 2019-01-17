@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
+
+    <link rel="stylesheet" href="{{ '/assets/css/custom_style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <p>{{ site.description | default: site.github.project_tagline }}</p>
+
+          <ul>
+            <li><a href="{{ '/' | relative_url }}">Walkthrough <strong>Guide</strong></a></li>
+            <li><a href="{{ '/api' | relative_url }}">API <strong>Docs</strong></a></li>
+            <li><a href="{{ site.github.repository_url }}">View On <strong>GitHub</strong></a></li>
+          </ul>
+
+          <nav><ul></ul></nav>
+
+      </header>
+      <section>
+
+      {{ content }}
+
+      </section>
+    </div>
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+
+    <script type="text/javascript">
+      var navUl = document.getElementsByTagName('nav')[0].firstChild
+      var headers = document.querySelectorAll('h2, h3')
+      for (var i = 0; i < headers.length; i++) {
+        var li = document.createElement('li')
+        var a = document.createElement('a')
+        a.href = '#' + headers[i].id
+        a.innerHTML = headers[i].innerHTML
+        li.className = 'nav-' + headers[i].tagName
+        li.appendChild(a)
+        navUl.appendChild(li)
+      }
+    </script>
+
+  {% if site.google_analytics %}
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
+      pageTracker._trackPageview();
+      } catch(err) {}
+    </script>
+  {% endif %}
+  <script type="text/javascript">var exports = {};</script>
+  <script src="https://unpkg.com/testcheck"></script>
+  <script type="text/javascript">
+    (function () {
+      console.log(
+        '              ______          __\n' +
+        '       ====  /_  __/__  _____/ /_\n' +
+        '              / / / _ \\/ ___/ __/\n' +
+        '             / / /  __(__  ) /_\n' +
+        '   ======   /_/  \\___/____/\\__/\n' +
+        '           ________              __\n' +
+        ' ======   / ____/ /_  ___  _____/ /__\n' +
+        '         / /   / __ \\/ _ \\/ ___/ //_/\n' +
+        '        / /___/ / / /  __/ /__/ ,<\n' +
+        '  ====  \\____/_/ /_/\\___/\\___/_/|_|\n\n'
+      );
+      const $m = 'color:#ab0f8f';
+      const $b = 'color:#1a1ba8';
+      const $o = 'color:#984500';
+      const $r = 'color:#c51a16';
+      const $d = 'color:default;';
+      console.log(
+        '%cconst %c{ %ccheck%c, %cproperty%c, %csample%c, %csampleOne%c, %cgen%c, %cGenerator%c } %c=%c require(%c"testcheck"%c)',
+         $m,     $d, $b,    $d, $b,       $d, $b,     $d, $b,        $d, $b,  $d, $b,        $d,  $o,$d,        $r,          $d
+      );
+    })();
+    const { check, property, sample, sampleOne, gen, Generator } = exports;
+    exports = undefined;
+  </script>
+  </body>
+</html>

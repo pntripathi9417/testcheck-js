@@ -1,0 +1,80 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+
+.wrapper {
+  width: 880px;
+}
+
+header nav ul {
+  background: inherit;
+  border: none;
+  height: auto;
+  list-style: none;
+  padding: 0;
+  width: auto;
+}
+
+header nav ul li,
+header nav ul li + li {
+  border-right: none;
+  float: inherit;
+  height: auto;
+  width: auto;
+}
+
+header nav ul li a {
+  color: #525258;
+  display: inline;
+  font-size: inherit;
+  height: auto;
+  line-height: inherit;
+  text-align: left;
+}
+
+header nav ul li.nav-H2,
+header nav ul li + li.nav-H2 {
+  margin-top: 1em;
+}
+
+header nav ul li.nav-H2 a {
+  color: #909096;
+}
+
+header {
+  box-sizing: border-box;
+  height: 100%;
+  margin: -50px 0;
+  overflow-y: scroll;
+  padding: 50px 0 100px;
+  width: 290px;
+}
+
+@media print, screen and (max-width: 960px) {
+  header {
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+section {
+  margin-bottom: 50%;
+  width: 525px;
+}
+
+section h2 {
+  padding-top: 65px;
+}
+
+section h3 {
+  padding-top: 68px;
+  margin-top: -38px;
+}
+
+@media print, screen and (max-width: 960px) {
+  section {
+    width: auto;
+  }
+}
